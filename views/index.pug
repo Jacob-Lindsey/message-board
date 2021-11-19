@@ -2,4 +2,10 @@ extends layout
 
 block content
   h1= title
-  p Welcome to: #{title}
+  div.new-post-wrapper
+    a.new-post-button(href='/new') Add New Post
+  div.message-wrapper
+    each message in messages
+      li.message-item
+        p.author Posted by: #{message.user}
+        p.post-text #{message.text}

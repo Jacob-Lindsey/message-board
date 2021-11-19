@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  div.container
+    form#msg-form.form-wrapper(method='POST' action='/new')
+        input.user-input(name='msgUser' type='text' placeholer='Enter your name')
+        textarea.text-input(name='msgText' rows='5' cols='50' placeholer='Enter your message')
+        button.submit-button(type='submit' form='msg-form' value='Submit') Submit
